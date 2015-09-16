@@ -1,0 +1,1 @@
+SELECT FirstName + '.' + LastName + '@softuni.bg' AS [Employee Email] FROM Employees

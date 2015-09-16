@@ -1,0 +1,21 @@
+Problem 1. What is SQL? What is DML? What is DDL? Recite the most important SQL commands.
+
+SQL (Structured Query Language) is a special-purpose programming language designed for managing data held in a 
+relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS).
+
+DDL (data definition language or data description language) is a syntax similar to a computer programming language for 
+defining data structures, especially database schemas. DDL Statements:
+
+CREATE - make a new database, table, index, or stored procedure.
+
+DROP - destroy an existing database, table, index, or view.
+
+ALTER - modify an existing database object.
+
+DML (A data manipulation language) is a family of syntax elements similar to a computer programming language used 
+for selecting, inserting, deleting and updating data in a database. Main Statements:
+
+SELECT ... FROM ... WHERE ...
+INSERT INTO ... VALUES ...
+UPDATE ... SET ... WHERE ...
+DELETE FROM ... WHERE ...
