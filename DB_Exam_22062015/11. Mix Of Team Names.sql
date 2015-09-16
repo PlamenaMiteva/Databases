@@ -1,0 +1,5 @@
+SELECT SUBSTRING(LOWER(t.TeamName),1, LEN(t.TeamName)-1)+REVERSE(LOWER(s.TeamName)) AS Mix
+FROM Teams t
+CROSS JOIN Teams s
+WHERE SUBSTRING(REVERSE(LOWER(s.TeamName)),1,1) = SUBSTRING(LOWER(t.TeamName),LEN(t.TeamName),1)
+ORDER BY 'Mix' ASC
