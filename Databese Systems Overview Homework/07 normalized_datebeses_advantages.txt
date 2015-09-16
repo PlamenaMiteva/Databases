@@ -1,0 +1,29 @@
+Problem 7. Advantages of Normalized Databases
+
+
+
+The benefits of normalization include:
+
+- Searching, sorting, and creating indexes is faster, since tables are narrower, and more rows fit on a data page.
+
+- More flexibility in tuning queries due to the more clustered indexes (one per table).
+
+- Index searching is often faster, since indexes tend to be narrower and shorter.
+
+- More tables allow better use of segments to control physical placement of data.
+
+- Faster data modification commands as you have fewer indexes per table. 
+
+- More compact datebase (fewer null values and less redundant data).
+
+- Triggers execute more quickly when redundant data are  not maintained.
+
+- Data modification anomalies are reduced.
+
+- Normalization is conceptually cleaner and easier to maintain and change as your needs change.
+
+- While fully normalized databases require more joins, joins are generally very fast if indexes are available on the join columns.
+
+Adaptive Server is optimized to keep higher levels of the index in cache, so each join performs only one or two physical I/Os for each matching row.
+
+The cost of finding rows already in the data cache is extremely low.

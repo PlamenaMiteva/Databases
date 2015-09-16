@@ -1,0 +1,19 @@
+Problem 12. What is a NoSQL Database?
+
+A non-relational database is a database that does not incorporate the table/key model that relational database management systems (RDBMS) promote. 
+These kinds of databases require data manipulation techniques and processes designed to provide solutions to big data problems that big companies face. 
+The most popular emerging non-relational database is called NoSQL (Not Only SQL).
+
+Non-relational databases forgo the table form of rows and columns relational databases use in favor of specialized frameworks to store data, 
+which can be accessed by special query APIs.
+
+Persistence is an important element in these databases. To enable fast throughput of vast amounts of data the best option for performance is "in memory," 
+rather than reading and writing from disks. 
+
+NoSQL databases examplaes:
+
+- Column data model: Accumulo, Cassandra, Druid, HBase, Vertica
+- Document data model: Lotus Notes, Clusterpoint, Apache CouchDB, Couchbase, HyperDex, MarkLogic, MongoDB, OrientDB, Qizx
+- Key-value data model: CouchDB, Dynamo, FoundationDB, HyperDex, MemcacheDB, Redis, Riak, FairCom c-treeACE, Aerospike, OrientDB, MUMPS
+- Graph data model: Allegro, Neo4J, InfiniteGraph, OrientDB, Virtuoso, Stardog
+- Multi-model: OrientDB, FoundationDB, ArangoDB, Alchemy Database, CortexDB

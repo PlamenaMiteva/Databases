@@ -1,0 +1,50 @@
+Problem 9. Pros and Cons of Using Indexes in a Database?
+
+
+A database index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes 
+and storage space to maintain the index data structure. Indexes are used to quickly locate data without having to search every row in a database 
+table every time a database table is accessed. Indexes can be created using one or more columns of a database table, providing the basis for both 
+rapid random lookups and efficient access of ordered records.
+
+An index is a copy of select columns of data from a table that can be searched very efficiently that also includes a low-level disk block address 
+or direct link to the complete row of data it was copied from. 
+
+1. Clustered index
+
+Clustering alters the data block into a certain distinct order to match the index, resulting in the row data being stored in order. 
+Therefore, only one clustered index can be created on a given database table. The primary feature of a clustered index is therefore 
+the ordering of the physical data rows in accordance with the index blocks that point to them. 
+
+2. B-Tree
+
+B-tree is a tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time.
+In B-trees, internal (non-leaf) nodes can have a variable number of child nodes within some pre-defined range. When data is inserted or removed from 
+a node, its number of child nodes changes. In order to maintain the pre-defined range, internal nodes may be joined or split. 
+
+
+3. Column-store index
+
+The order that the index definition defines the columns in is important. It is possible to retrieve a set of row identifiers using only the first 
+indexed column. However, it is not possible or efficient (on most databases) to retrieve the set of row identifiers using only the second or 
+greater indexed column.
+
+
+4. Full-text search index
+
+Full text search refers to techniques for searching a single computer-stored document or a collection in a full text database. 
+In a full-text search, a search engine examines all of the words in every stored document as it tries to match search criteria.
+
+
+5. Spatial index
+
+A sparse index in databases is a file with pairs of keys and pointers for every block in the data file. 
+Every key in this file is associated with a particular pointer to the block in the sorted data file. 
+
+Indexers Pros And Cons
+
+If indexes are used, writing to table (for example inserting rows) is slower, because in addition to just writing the data, MySQL needs to
+handle the index file also. This is an issue usually only if you need very fast inserts or you need to insert thousands of rows at the same
+time and fast.
+
+They might increase query speed or they might not. Basic rule is that if you are searching some specific key in a table, using indexes in that
+field will make query faster, but if you have index in some other field, it won't make a difference.

@@ -1,0 +1,32 @@
+Problem 5. Relationships between Tables in Relational Databases
+
+
+Relationships between the tables in a database diagram show how the columns in one table are linked to columns in another table.
+A relationship works by matching data in key columns — usually columns with the same name in both tables. 
+In most cases, the relationship matches the primary key from one table, which provides a unique identifier for each row, 
+with an entry in the foreign key in the other table. 
+
+There are three types of relationships between tables. The type of relationship that is created depends on how the related columns are defined.
+
+1. One-to-Many Relationships
+
+A one-to-many relationship is the most common type of relationship. In this type of relationship, a row in table A can have many matching rows in table B, 
+but a row in table B can have only one matching row in table A. A one-to-many relationship is created if only one of the related columns is a primary key 
+or has a unique constraint.
+
+2. Many-to-Many Relationships
+
+In a many-to-many relationship, a row in table A can have many matching rows in table B, and vice versa. 
+Such a relationship is created by defining a third table, called a junction table, whose primary key consists of the foreign keys 
+from both table A and table B.
+
+3. One-to-One Relationships
+
+In a one-to-one relationship, a row in table A can have no more than one matching row in table B, and vice versa. 
+A one-to-one relationship is created if both of the related columns are primary keys or have unique constraints.
+This type of relationship is not common because most information related in this way would be all in one table. 
+Usage:
+- to divide a table with many columns.
+- to isolate part of a table for security reasons.
+- to store data that is short-lived and could be easily deleted by simply deleting the table.
+- to store information that applies only to a subset of the main table.

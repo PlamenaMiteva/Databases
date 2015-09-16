@@ -1,0 +1,19 @@
+Problem 4. Difference between a Primary and Foreign Key
+
+A primary key is a field or combination of fields that uniquely identify a record in a table, so that an individual record can be located without confusion.
+Primary keys enforce entity integrity by uniquely identifying entity instances.
+
+A foreign key (sometimes called a referencing key) is a key used to link two tables together. 
+Typically the primary key field from one table is inserted into the other table where it becomes a foreign key 
+(it remains a primary key in the original table).Foreign keys enforce referential integrity by completing an association between two entities.
+
+Diffrences between primary and foreign keys:
+
+- primary keys can not accept "null values"
+
+- primary keys uniquely identify a record in the table while foreign key is a field in the table that is primary key in another table.
+
+- We can have only one Primary key and more than one foreign key in a table.
+
+- By default, Primary key is clustered index and data in the database table is physically organized in the sequence of clustered index.
+Foreign key do not automatically create an index, clustered or non-clustered. You can manually create an index on foreign key.

@@ -1,0 +1,83 @@
+Problem 1.What Database Models do You Know?
+
+
+Database systems can be based on different data models or database models respectively. 
+A data model is a collection of concepts and rules for the description of the structure of the database. 
+Structure of the database means the data types, the constraints and the relationships for the description or storage of data respectively. 
+
+The most often used data models are:
+
+
+The network model and the hierarchical model are the predecessors of the relational model. 
+They are build upon individual data sets and are able to express hierarchical or network like structures of the real world.
+
+1. Hierarchical Model
+The hierarchical database stores data in a series of records. These records have a set of field values attached to them. 
+All instances of a specific record are collected together as a "record type". 
+It uses "Parent Child Relationships" to create links between record types. 
+It does this by using trees. However, it is only able to cope with one tree. 
+As well, there can only be one parent per child, and no relationships among the child records are possible.
+A hierarchical database has a very structured form, as it allows no links between layers in different branches of the tree. 
+Therefore, it is easy to use for adding, updating and deleting records.
+
+2. Network Model
+The network database model is very similar to the hierarchical model. 
+However, instead of using a single-parent tree hierarchy, the network model uses set theory to provide a tree-like hierarchy 
+with the exception that the child tables were allowed to have more than one parent. This allowed the network database model to support many relationships.
+A good example of the network model is the Local Area Network (LAN), which connects computers and devices in a limited geographic area.
+
+3. Relational Model
+The relational model is the best known and in today’s DBMS most often implemented database model. 
+It defines a database as a collection of tables (relations) which contain all data. 
+A relational database is a database system in which any database file can be a component of more than one of the database's tables.
+It is also a database system in which the database is organized and accessed according to the relationships between data items 
+without the need for any consideration of physical orientation and relationship. Relationships between data items are expressed by means of tables.
+Properties of Relational Databases:
+Values are atomic
+Each column and row has a unique name
+Each row is unique
+The sequence of columns and rows is insignificant
+Column values are of the same kind
+Keys
+A key is the tool to unlock access to tables. Knowledge of the key enables us to locate specific records, and cross the relationships between tables.
+Certain fields may be designated as keys, which means that searches for specific values of that field will use indexing
+A candidate key is any field, or combination of fields, that uniquely identifies a record. The field/s of the candidate key must contain unique values
+(if the values were duplicated, they would be no longer identify unique records), and cannot contain a null value.
+A primary key is the candidate key that has been chosen to identify unique records in a particular table.
+A foreign key is a reference to a key in another table. A relationship between two tables is created by creating a common field to the two tables.
+Foreign keys allow us to ensure what is called "referential integrity". This means a foreign key that contains a value must 
+refer to an existing record in the related table.
+
+4. Object-oriented Model
+Object-oriented models define a database as a collection of objects with features and methods.
+Multimedia, hypertext, and object relational are all databases connected with object-oriented databases.
+
+4.1. Multimedia Database
+Uses multiple forms of information content and information processing (e.g. text, audio, graphics, animation, video, interactivity). 
+This means it can store more types of data than a relational database.
+The object would store operations, which are called methods, the programs that objects use to process themselves.
+
+4.2. Hypertext Database
+Any object, whether it be a piece of text, a picture, or a film, can be linked to any other object. 
+Hypertext databases are particularly useful for organizing large amounts of disparate information, but they are not designed for numerical analysis.
+
+4.3. Hypermedia Database
+Hypermedia Databases allow media files to be queried and used as a tool to develop an understanding of your originally searched question. 
+The goal of a hypermedia data base is to minimize error while saving space; this goal is obtained by linking to files via 'tags' or searchable text, 
+then upon entry into the link (after a search is completed) the files format program is ran.
+
+5. Object-relational Model
+Object-oriented models are very powerful but also quite complex. 
+With the relatively new object-relational database model is the wide spread and simple relational database model 
+extended by some basic object-oriented concepts. These allow us to work with the widely known relational database 
+model but also have some advantages of the object-oriented model without its complexity.
+An object-oriented database uses software where little chunks are written within the database files. An object has two parts:
+*data that could be audio, video or graphics
+*instructions on what action to be taken on the data.
+Object-oriented database has the capability to handle from small files to very large files of information. 
+It is easy to read and more efficient when it comes to managing a lot of data.
+
+6. Multidimensional Database
+the multidimensional data model is used when the objective is to analyze data rather than to perform online transactions. 
+Multidimensional database technology is a key factor in the interactive analysis of large amounts of data for decision-making purposes.
+In contrast to previous technologies, these databases view data as multidimensional cubes that are particularly well suited for data analysis.

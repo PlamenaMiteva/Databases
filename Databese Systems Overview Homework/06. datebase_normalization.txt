@@ -1,0 +1,38 @@
+Problem 6. Schema Normalization
+
+Database normalization is the process of organizing the attributes and tables of a relational database to minimize data redundancy.
+
+There are two main objectives of the normalization process: 
+eliminate redundant data (storing the same data in more than one table) and 
+ensure data dependencies make sense (only storing related data in a table). 
+Both of these are valuable goals as they reduce the amount of space a database consumes and ensure that data is logically stored.
+
+The process of designing a relational database includes making sure that a table contains only data directly related to the primary key, 
+that each data field contains only one item of data, and that redundant (duplicated and unnecessary) data is eliminated. 
+We use the normalization process to design efficient and functional databases. 
+By normalizing, we store data where it logically and uniquely belongs. 
+The normalization process involves a few steps and each step is called a form.
+
+1. First Normal Form (1NF) = ELIMINATE REPEATING GROUPS (make a separate table for each set of related attributes, and give each table a primary key).
+A table is in 1NF if there are no duplicated rows in the table, if data is atomic (each cell is single-valued; there are not repeating groups or arrays), 
+if entries in a column are of the same kind (type), and if each row contains the same columns. The order of the rows is irrelevant. 
+The order of the columns is irrelevant. However, the requirement that there be no duplicated rows in the table means that the table has a 
+primary key (singe or composite).
+
+2. Second Normal Form (2NF) = ELIMINATE REDUNDANT DATA (if an attribute depends on only part of multi-valued key, remove it to a separate table). 
+A table is in 2NF if it met all database requirements for 1NF, and if each non-key attribute is fully functionally dependent on the whole primary key; 
+data, which does not directly dependent on table’s primary key must be moved into another table. 
+To test for functional dependency you have to establish whether primary key determines each non-key attribute. 
+No subset of the key can determine the attribute’s value.
+
+3. Third Normal Form (3NF) = ELIMINATE COLUMNS NOT DEPENDANT ON KEY (if attributes do not contribute to a description of the key remove them to a 
+separate table). A table is in 3NF if it met all database requirements for both 1NF and 2NF, and if all transitive dependencies are eliminated
+(each column must depend directly on the primary key; all attributes that are not dependant upon the primary key must be eliminated.
+
+4. Fourth Normal Form (4NF) = ISOLATE INDEPENDENT MULTIPLE RELATIONSHIPS (no table may contain two or more 1:M or M:M relationships that are not 
+directly related). This applies to only 1:M and M:M relationships. To be in Fourth Normal Form (4NF), a relation must first be in Boyce-Codd normal form. 
+Additionally, a given relation may not contain more than one multi-valued attribute. 
+There should not exist any non-trivial multi-valued dependencies in a table. 
+
+5. Fifth Normal Form (5NF) = ISOLATE SEMANTICALLY RELATED MULTIPLE RELATIONSHIPS (there may be practical constraints on 
+information that justify separating logically related M:M relationships).
